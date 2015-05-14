@@ -14,3 +14,4 @@
 *.sublime-project
 *.sublime-workspace
 bin
+config/database.yml
