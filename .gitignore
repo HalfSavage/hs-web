@@ -15,3 +15,4 @@
 *.sublime-workspace
 bin
 config/database.yml
+vendor/assets/components
