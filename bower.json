@@ -1,0 +1,24 @@
+{
+  "name": "hs-web",
+  "version": "0.0.0",
+  "homepage": "https://github.com/HalfSavage/hs-web",
+  "authors": [
+    "booty <johnedmundrose@gmail.com>"
+  ],
+  "description": "The flyest shit ever",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "cocks"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/assets/components",
+    "test",
+    "tests"
+  ]
+}
