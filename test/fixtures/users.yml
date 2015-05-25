@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  type: 
+  login: MyString
+  gender_id: 
+  email: MyString
+  active: false
+
+two:
+  type: 
+  login: MyString
+  gender_id: 
+  email: MyString
+  active: false
