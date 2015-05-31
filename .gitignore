@@ -17,3 +17,4 @@ bin
 config/database.yml
 vendor/assets/components
 public/assets
+config/secrets.yml
