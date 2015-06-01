@@ -25,7 +25,7 @@ Ruby version automatically.
 
 [Redis](http://redis.io/) is fast as shit. We use this for caching and storing session state. Redis powers much of Reddit and a bunch of other stuff too.
 
-**OSX:** Simply install the [Homebrew](http://brew.sh/) package manager. Once that's done, `brew install postgres; brew install redis` is all you need.
+**OSX:** Simply install the [Homebrew](http://brew.sh/) package manager. Once that's done, `brew install postgres; brew install redis` is all you need. For convenience, you may wish to install [LaunchRocket](https://github.com/jimbojsb/launchrocket) which allows you to easily stop/start launchd services like postgres and redis that you install via Homebrew.
 
 **Linux:** It's probably really easy. I suppose. Probably? Who wants to write the guide?
 
