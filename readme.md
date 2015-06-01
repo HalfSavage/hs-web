@@ -2,7 +2,7 @@
 
 You are still half savage. But there is hope. Welcome, developers!
 
-## Local Development Setup
+## Local Development Setup: Thirty Minutes or Less!
 
 You'll want to be running Linux or OSX.
 
