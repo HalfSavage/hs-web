@@ -41,6 +41,6 @@ The only catch is that to do this while running HalfSavage locally you need to t
 
         127.0.0.1 halfsavage.com
 
- 2. Forward incoming requests on port 80 to port 31337 because that's the port that HalfSavage uses when you launch it with `rails s`. **OSX Yosemite:** Follow [this guide](http://salferrarello.com/mac-pfctl-port-forwarding/).
+2. Forward incoming requests on port 80 to port 31337 because that's the port that HalfSavage uses when you launch it with `rails s`. **OSX Yosemite:** Follow [this guide](http://salferrarello.com/mac-pfctl-port-forwarding/).
 
-Note about port forwarding: We could simply run Rails on 80 instead of 31337 but I ran into permission issues trying to do this. Only a superuser can bind to port 80; but if I do `sudo rails s -p 80` then it can't find my Ruby environment. If somebody has a better solution, let me know.
+ - Note about port forwarding: We could simply run Rails on 80 instead of 31337 but I ran into permission issues trying to do this. Only a superuser can bind to port 80; but if I do `sudo rails s -p 80` then it can't find my Ruby environment. If somebody has a better solution, let me know.
