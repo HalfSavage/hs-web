@@ -2,36 +2,50 @@
 
 You are still half savage. But there is hope. Welcome, developers!
 
+Pretty standard development setup. It's fast, proven, and stays the fuck out of your way as much as possible.
+
+New to this? We'll help! This setup does take a small time investment to learn, particularly if you've only done "cowboy coding" in the past. Booty or one of the other devs will be happy to walk you through everything over a screen share session. We promise that after a small initial time investment things will feel pretty awesome.
+
+If you run into issues this guide doesn't cover: please update the guide with your experiences. Help out the next person.
+
+
+## Git Strategy: GitHub Flow
+
+There are an infinite number of ways to use git. We use [GitHub Flow](https://guides.github.com/introduction/flow/) which basically has two simple rules:
+
+1. **"Everything in the `master` branch is deployable."** ...once we have continuous deployment, commits to `master` will trigger a test run followed by a deployment if the tests pass. Your fellow developers will also assume that everything in master is golden. Don't break `master`.
+
+2. **Everything else goes into a `feature/foo` or `hotfix/foo` branch.** Create as many of these as you want. There's no functional difference between `feature` and `hotfix` branches; they're just naming conventions. Once you think one of these is ready, create a pull request on GitHub.
+
+
 ## Local Development Setup: Thirty Minutes or Less!
 
-You'll want to be running Linux or OSX.
+**OSX or Linux:** Sweet. You're good to go.
 
-If you're running Windows: install a friendly Linux VM using VirtualBox or HyperV and work from there.
+**Windows:** Install a friendly Linux VM using VirtualBox or HyperV and work from there. Native Rails development on Windows is a fucking nightmare. Ruby and Rails themselves work pretty well but lag months or years behind the latest versions, which means you will not be able to integrate with the rest of the team.
 
-Rails development on Windows is a fucking nightmare. The general story is that Ruby and Rails themselves work pretty well but you'll often be stuck on a non-current version. More importantly, gems -- particularly those with native extensions -- tend to be problematic. You will spend more time fighting with them than actually being productive.
-
-The rest of this guid will assume you're running OSX or Linux.
+The rest of this guide will assume you're running OSX or Linux.
 
 ### Installing Ruby
 
 The best way to install Ruby is with [rbenv](https://github.com/sstephenson/rbenv). It will allow you to install multiple versions of Ruby. HalfSavage includes a `.ruby-version` file that will tell `rbenv` to switch to the correct
 Ruby version automatically.
 
-[rvm](https://rvm.io/) should work too. However, most people prefer the simplicity and ease of `rbenv` these days.
+[rvm](https://rvm.io/) should work too. However, most people prefer the simplicity and ease of `rbenv`.
 
 ### Installing Homebrew, Postgres and Redis (OSX)
 
-[Postgres](http://www.postgresql.org/) is a free, awesome, relational database. Compared to MySQL, it offers many more programmer-friendly features. Since MySQL was acquired by Oracle, Postgres has really been picking up steam. The only downside is that there's not a great GUI client available for it. Oh well.
+[Postgres](http://www.postgresql.org/): free, awesome, programmer-friendly relational database. Compared to MySQL, it offers many more programmer-friendly features. Google "Postgres vs. MySQL" if you want to know more. Since MySQL was acquired by Oracle, Postgres has really been picking up steam. The only downside is that there's not a great GUI client available for Postgres. Oh well.
 
-[Redis](http://redis.io/) is fast as shit. We use this for caching and storing session state. Redis powers much of Reddit and a bunch of other stuff too.
+[Redis](http://redis.io/): blazing fast temporary storage. We use this for caching and storing session state. Redis powers much of Reddit and a bunch of other stuff too.
 
 **OSX:** Simply install the [Homebrew](http://brew.sh/) package manager. Once that's done, `brew install postgres; brew install redis` is all you need. For convenience, you may wish to install [LaunchRocket](https://github.com/jimbojsb/launchrocket) which allows you to easily stop/start launchd services like postgres and redis that you install via Homebrew.
 
 **Linux:** It's probably really easy. I suppose. Probably? Who wants to write the guide?
 
-### Port Forwarding & Working With OmniAuth (Optional)
+### Port Forwarding & Working With OmniAuth (Optional; Do This Later)
 
-*Skip this part of the guide if you're just getting started, or if you're not using OmniAuth to create accounts in your local development environment. You can always do this part later.*
+*Skip this part of the guide if you're just getting started. It's only needed if you're working on our OmniAuth implementation. If you skip this step, you can run Half Savage locally and create local HS accounts by signing up manually.*
 
 HalfSavage incorporates OmniAuth. This lets users seamlessly create HalfSavage accounts if they already have an account on Twitter, Facebook, Imgur, etc. This is awesome for our members.
 
