@@ -1,19 +1,16 @@
 # HalfSavage
 
-You are still half savage. But there is hope. Welcome, developers!
-
-Pretty standard development setup. It's fast, proven, and stays the fuck out of your way as much as possible.
+Welcome, developers! Pretty standard development setup here. It's fast, proven, and stays the fuck out of your way as much as possible.
 
 New to this? We'll help! This setup does take a small time investment to learn, particularly if you've only done "cowboy coding" in the past. Booty or one of the other devs will be happy to walk you through everything over a screen share session. We promise that after a small initial time investment things will feel pretty awesome.
 
 If you run into issues this guide doesn't cover: please update the guide with your experiences. Help out the next person.
 
-
 ## Git Strategy: GitHub Flow
 
 There are an infinite number of ways to use git. We use [GitHub Flow](https://guides.github.com/introduction/flow/) which basically has two simple rules:
 
-1. **"Everything in the `master` branch is deployable."** ...once we have continuous deployment, commits to `master` will trigger a test run followed by a deployment if the tests pass. Your fellow developers will also assume that everything in master is golden. Don't break `master`.
+1. **"Everything in the `master` branch is deployable."** Once we have continuous deployment, commits to `master` will trigger a test run followed by a deployment if the tests pass. Your fellow developers will also assume that everything in `master` is golden; they will pull `master` and assume that it's a known-good version of the code. Don't break `master`.
 
 2. **Everything else goes into a `feature/foo` or `hotfix/foo` branch.** Create as many of these as you want. There's no functional difference between `feature` and `hotfix` branches; they're just naming conventions. Once you think one of these is ready, create a pull request on GitHub.
 
