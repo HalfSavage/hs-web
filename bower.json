@@ -7,7 +7,7 @@
   ],
   "description": "The flyest shit ever",
   "moduleType": [
-    "amd"
+    "globals"
   ],
   "keywords": [
     "cocks"
@@ -20,5 +20,12 @@
     "vendor/assets/components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "fontawesome": "~4.4.0",
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.5"
+  },
+  "main": "",
+  "private": true
 }
