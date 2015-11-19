@@ -9,6 +9,11 @@ module Rails
   # Server port
   class Server
     def default_options
+      # Doing OmniAuth stuff is a lot easier if you can map
+      # halfsavage.com to localhost on port 80
+      # TODO: It would be nice to find a better way to do this,
+      # for HalfSavage devs who have something else running on
+      # port 80 locally
       super.merge(Port: 31337)
     end
   end
