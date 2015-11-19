@@ -17,11 +17,9 @@ There are an infinite number of ways to use git. We use [GitHub Flow](https://gu
 
 ## Local Development Setup: Thirty Minutes or Less!
 
-**OSX or Linux:** Sweet. You're good to go.
+**Running Windows?** Install a friendly Linux VM using VirtualBox or HyperV and work from there. Native Rails development on Windows is a fucking nightmare. Ruby and Rails themselves work pretty well but lag months or years behind the latest versions, which means you will not be able to integrate with the rest of the team.
 
-**Windows:** Install a friendly Linux VM using VirtualBox or HyperV and work from there. Native Rails development on Windows is a fucking nightmare. Ruby and Rails themselves work pretty well but lag months or years behind the latest versions, which means you will not be able to integrate with the rest of the team.
-
-The rest of this guide will assume you're running OSX or Linux.
+The rest of this guide will assume you're running OSX, Linux, or a Linux VM on Windows.
 
 ### Installing Ruby
 
@@ -52,6 +50,11 @@ The only catch is that to do this while running HalfSavage locally you need to t
 
         127.0.0.1 halfsavage.com
 
-2. Forward incoming requests on port 80 to port 31337 because that's the port that HalfSavage uses when you launch it with `rails s`. **OSX Yosemite:** Follow [this guide](http://salferrarello.com/mac-pfctl-port-forwarding/).
+2. Forward incoming requests on port 80 to port 31337 because that's the port that HalfSavage uses when you launch it with `rails s`. **OSX Yosemite:** Follow [this guide](http://salferrarello.com/mac-pfctl-port-forwarding/). Essentially, this is what you'll need:
+
+        echo "
+		rdr pass inet proto tcp from any to any port 80 -> 127.0.0.1 port 31337
+		rdr pass inet proto tcp from any to any port 443 -> 127.0.0.1 port 31338
+		" | sudo pfctl -ef -
 
  - Note about port forwarding: We could simply run Rails on 80 instead of 31337 but I ran into permission issues trying to do this. Only a superuser can bind to port 80; but if I do `sudo rails s -p 80` then it can't find my Ruby environment. If somebody has a better solution, let me know.
