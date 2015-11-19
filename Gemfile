@@ -35,6 +35,19 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'audited-activerecord'
 
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+gem 'omniauth-github'
+# gem 'omniauth-gplus'
+gem 'omniauth-imgur'
+# gem 'omniauth-instagram'
+# gem 'omniauth-lastfm'
+# gem 'omniauth-stackexchange'
+# gem 'omniauth-steam'
+# gem 'omniauth-tumblr'
+# gem 'omniauth-yahoo'
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
